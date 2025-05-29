@@ -19,7 +19,15 @@ Joint and positional control callback functions are deleted for safety, meaning 
 
 ## 2 To use
 
-The setup and prerequisites of this package are the same as Piper ROS. The new features are introduced:
+The setup and prerequisites of this package are the same as Piper ROS, However firmware version needs to be ID'ed since there's reports on MIT not working with certain firmware versions.
+
+Setup that worked:
+**Firmware Version H-V1.2.0**
+**Software Version V1.0.6**
+
+The information is available on Piper's GUI. Firmware is attached in utils folder along with a instruction to flash (in Chinese)
+
+The new features are introduced as followed:
 
 ### 2.2: Launching control node with torque:
 
