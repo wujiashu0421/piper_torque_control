@@ -2,11 +2,11 @@
 
 Forked from Piper ROS (https://github.com/agilexrobotics/Piper_ros)
 
-## 1. Changes to original repo
+## 1. Changes to the original repo
 
 ### 1.1 Torque Control
 
-Torque control is enabled by creating the **TorqueCmd** topic. For standardisation, `geometry_msgs/Vector3` is used. X = motor number, Y = Torque value, Z is unused.  Specify the joint number and reference torque and publish.
+Torque control is enabled by creating the **TorqueCmd** topic. For standardisation, `geometry_msgs/Vector3` is used. X = motor number, Y = Torque value, Z is unused.  Specify the joint number and reference torque, and publish.
 
 ### 1.2 Current Feedback
 
@@ -14,16 +14,16 @@ Motor current with timestamp is replacing the effort section in the `joint_state
 
 ### 1.3 Joint and positional control
 
-Joint and positional controls functions are deleted for safety, meaning **TORQUE CONTROL ONLY**
-
-### 1.4 PAT specific safety feature
-
-Only joint 2, 3, and 5 are allowed for MIT control. All of the other joints will **stay at the same position upon enable/initialisation**
+Joint and positional control callback functions are deleted for safety, meaning **TORQUE CONTROL ONLY**
 
 
 ## 2 To use
 
-Setup and prereq of this package is the same as Piper ROS. The new features are introduced:
+The setup and prerequisites of this package are the same as Piper ROS. The new features are introduced:
+
+### 2.2: Launching control node with torque:
+
+`ros2 launch piper start_single_piper_torque.launch.py`
 
 ### 2.1 Send torque message
 
